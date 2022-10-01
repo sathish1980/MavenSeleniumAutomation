@@ -38,7 +38,7 @@ public class FirstTestcase
 	
 	public void locators()
 	{
-		//driver.findElement(By.id("email"));.sendKeys("kumar.sathish189@gmail.com");
+		//driver.findElement(By.id("email")).sendKeys("kumar.sathish189@gmail.com");
 		WebElement username=driver.findElement(By.name("email"));
 		username.sendKeys("kumar.sathish189@gmail.com");
 		username.clear();
