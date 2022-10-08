@@ -31,6 +31,8 @@ public class Dropdown {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://chercher.tech/practice/practice-dropdowns-selenium-webdriver");
+		Select products= new Select(driver.findElement(By.cssSelector("select#first")));
+		products.selectByVisibleText("Google");
 		Select multidropdown= new Select(driver.findElement(By.xpath("(//*[@id='second'])[2]")));
 		System.out.println(multidropdown.isMultiple());
 		//drodpwon.selectByIndex(4);

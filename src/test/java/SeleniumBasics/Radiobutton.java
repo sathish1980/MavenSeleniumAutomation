@@ -23,6 +23,11 @@ public class Radiobutton {
 		wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("(//*[text()='Chrome']//parent::td//div[1])[1]")));
 		driver.findElement(By.xpath("(//*[text()='Chrome']//parent::td//div[1])[1]")).click();
 	}
+	
+	public void secondmethod()
+	{
+		driver.findElement(By.xpath(""));
+	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Radiobutton r = new Radiobutton();
