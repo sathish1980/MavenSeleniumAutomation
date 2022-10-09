@@ -48,6 +48,7 @@ public class Keyboard {
 		Actions mouseaction= new Actions(driver);
 		mouseaction.moveToElement(driver.findElement(By.id("email"))).sendKeys("sathish").perform();
 		mouseaction.keyDown(Keys.TAB).keyUp(Keys.TAB).perform();
+		mouseaction.keyDown(Keys.SHIFT).keyDown(Keys.TAB).keyUp(Keys.SHIFT).keyUp(Keys.TAB).perform();
 			
 	}
 	public static void main(String[] args) throws AWTException {
