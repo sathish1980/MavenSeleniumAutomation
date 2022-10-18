@@ -84,8 +84,8 @@ public class Mouseactions {
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 		Mouseactions M = new Mouseactions();
+		//M.draganddrop();
 		M.Slider();
-		//M.progressbar();
 	}
 
 }

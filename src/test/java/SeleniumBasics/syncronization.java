@@ -19,14 +19,14 @@ public class syncronization {
 		driver.manage().window().maximize();
 		driver.get("https://www.facebook.com/");
 		driver.findElement(By.xpath("//*[@data-testid='open-registration-form-button']")).click();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		
 		driver.findElement(By.name("firstname")).sendKeys("sathish");
 		driver.findElement(By.name("lastname")).sendKeys("kumar");
 		driver.findElement(By.name("reg_email__")).sendKeys("kumar.sathish189@gmail.com");
 		
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(60));
-		wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.name("reg_email_confirmation__")));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.name("reg_email_confirmation__")));
 		
 		driver.findElement(By.name("reg_email_confirmation__")).sendKeys("kumar.sathish189@gmail.com");
 		//fluent wait
@@ -34,6 +34,7 @@ public class syncronization {
 				  .withTimeout(Duration.ofSeconds(60))
 				  .pollingEvery(Duration.ofSeconds(5))
 				  .ignoring(NoSuchElementException.class);
+		//Thread.sleep(2000);
 		
 	}
 

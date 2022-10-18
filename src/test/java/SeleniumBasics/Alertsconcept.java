@@ -2,6 +2,7 @@ package SeleniumBasics;
 
 import java.time.Duration;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -18,11 +19,12 @@ public class Alertsconcept {
 		driver.manage().window().maximize();
 		driver.get("https://leafground.com/alert.xhtml");
 		driver.findElement(By.xpath("//*[@id='j_idt88:j_idt91']")).click();
-		driver.switchTo().alert().accept();
+		Alert alert=driver.switchTo().alert();
+		alert.accept();
 		String textvalue=driver.findElement(By.xpath("//*[@id='simple_result']")).getText();
 		System.out.println(textvalue);
 		driver.findElement(By.xpath("//*[@id='j_idt88:j_idt93']")).click();
-		driver.switchTo().alert().dismiss();
+		alert.dismiss();
 		String canceltext=driver.findElement(By.xpath("//*[@id='result']")).getText();
 		System.out.println(canceltext);
 		driver.findElement(By.xpath("//*[@id='j_idt88:j_idt104']")).click();

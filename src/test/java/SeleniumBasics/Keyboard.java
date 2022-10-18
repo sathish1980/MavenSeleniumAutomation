@@ -54,7 +54,7 @@ public class Keyboard {
 	public static void main(String[] args) throws AWTException {
 		// TODO Auto-generated method stub
 		Keyboard K = new Keyboard();
-		K.keyboardactioninapplication();
+		K.keyboardimplementation();
 	}
 
 }
