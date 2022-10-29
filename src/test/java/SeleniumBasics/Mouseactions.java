@@ -78,13 +78,13 @@ public class Mouseactions {
 		js.executeScript("arguments[0].scrollIntoView();", startbutton);
 		Actions mouse= new Actions(driver);
 		mouse.moveToElement(driver.findElement(By.xpath("//*[@id='form:j_idt125']//span[1]"))).dragAndDropBy(driver.findElement(By.xpath("//*[@id='form:j_idt125']//span[1]")), -80, 0).perform();
-		mouse.moveToElement(driver.findElement(By.xpath("//*[@id='form:j_idt125']//span[2]"))).dragAndDropBy(driver.findElement(By.xpath("//*[@id='form:j_idt125']//span[2]")), -80, 0).perform();
+		mouse.moveToElement(driver.findElement(By.xpath("//*[@id='form:j_idt125']//span[2]"))).dragAndDropBy(driver.findElement(By.xpath("//*[@id='form:j_idt125']//span[2]")), 80, 0).perform();
 	}
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 		Mouseactions M = new Mouseactions();
-		//M.draganddrop();
+		//M.progressbar();
 		M.Slider();
 	}
 

@@ -39,7 +39,7 @@ public class Keyboard {
 		
 	}
 	
-	public void keyboardactioninapplication()
+	public void keyboardactioninapplication() throws InterruptedException
 	{
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\driverfiles\\chromedriver_win32\\chromedriver.exe");
 		driver = new ChromeDriver();
@@ -48,10 +48,11 @@ public class Keyboard {
 		Actions mouseaction= new Actions(driver);
 		mouseaction.moveToElement(driver.findElement(By.id("email"))).sendKeys("sathish").perform();
 		mouseaction.keyDown(Keys.TAB).keyUp(Keys.TAB).perform();
+		Thread.sleep(1000);
 		mouseaction.keyDown(Keys.SHIFT).keyDown(Keys.TAB).keyUp(Keys.SHIFT).keyUp(Keys.TAB).perform();
 			
 	}
-	public static void main(String[] args) throws AWTException {
+	public static void main(String[] args) throws AWTException, InterruptedException {
 		// TODO Auto-generated method stub
 		Keyboard K = new Keyboard();
 		K.keyboardimplementation();

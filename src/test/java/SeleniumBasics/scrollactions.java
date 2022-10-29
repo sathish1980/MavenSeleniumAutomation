@@ -25,7 +25,7 @@ public class scrollactions {
 		//Horizontal scroll right
 		js.executeScript("window.scrollBy(750,0)", "");
 		Thread.sleep(2000);
-		//vertical scroll left
+		//Horizontal scroll left
 		js.executeScript("window.scrollBy(-750,0)", "");
 		Thread.sleep(2000);
 		//vertical scroll to page end

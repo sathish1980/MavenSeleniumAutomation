@@ -22,6 +22,7 @@ public class Verificationandvalidation {
 		driver.findElement(By.xpath("//*[text()='Check Box']//parent::a")).click();
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//*[@id='j_idt87:j_idt89']//*[contains(@class,'ui-chkbox-box')]")));
+		//validation commands
 		boolean checkboxstatus=driver.findElement(By.xpath("//*[@id='j_idt87:j_idt89']//*[contains(@class,'ui-chkbox-box')]")).isSelected();
 		boolean checkboxstatusdisplayed=driver.findElement(By.xpath("//*[@id='j_idt87:j_idt89']//*[contains(@class,'ui-chkbox-box')]")).isDisplayed();
 		boolean checkboxstatusenabled=driver.findElement(By.xpath("//*[@id='j_idt87:j_idt89']//*[contains(@class,'ui-chkbox-box')]")).isEnabled();
@@ -51,7 +52,7 @@ public class Verificationandvalidation {
 		System.out.println("displayed or not : "+checkboxstatusdisplayedd);
 		System.out.println("enabled or not: "+checkboxstatusenabledd);
 		
-		//Verififcation
+		//Verification
 		System.out.println("********** verification field **********");
 		String Title=driver.getTitle();
 		System.out.println(Title);

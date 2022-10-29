@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="SanityTest(failed)">
+    <classes>
+      <class name="Testcase.Facebooklogin">
+        <methods>
+          <include name="Browserlaunch"/>
+          <include name="FBURL"/>
+          <include name="teardown"/>
+          <include name="facebooklogin"/>
+          <include name="takescreenshot"/>
+        </methods>
+      </class> <!-- Testcase.Facebooklogin -->
+    </classes>
+  </test> <!-- SanityTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->
