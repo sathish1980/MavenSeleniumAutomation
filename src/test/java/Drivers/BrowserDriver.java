@@ -6,11 +6,18 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+
 import Utils.Propertyfileread;
 
 public class BrowserDriver extends Propertyfileread {
 
 	public static WebDriver driver;
+	public static ExtentReports report;
+	public static ExtentTest test;
+	public static String reportpath=System.getProperty("user.dir")+"//Reports//selenium.html";
+	
 	
 	public void launch()
 	{
@@ -32,5 +39,6 @@ public class BrowserDriver extends Propertyfileread {
 		driver = new EdgeDriver(options);
 		driver.manage().window().maximize();
 		}
+		
 	}
 }
